@@ -193,6 +193,30 @@ Displays section titles and descriptions while maintaining consistent typography
 - Does not control layout spacing.
 - Parent components control spacing.
 
+---
+
+## TechnologyPill
+
+### Responsibility
+
+Represents a single technology using an icon and label.
+
+### Usage
+
+```tsx
+<TechnologyPill
+  icon="⚛️"
+  name="React"
+/>
+```
+
+### Rules
+
+- Displays one technology only.
+- Accepts any ReactNode as an icon.
+- Does not control layout.
+- Parent components manage spacing and grouping.
+
 ## Common Components
 
 - Container
