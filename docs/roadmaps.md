@@ -2,6 +2,8 @@
 
 ## Sprint 1 ✅
 
+Completed
+
 Project Foundation
 
 - Initialize Next.js project
@@ -12,14 +14,27 @@ Project Foundation
 
 ---
 
-## Sprint 2
+## Sprint 2 
 
 Design System Foundation
+
+Completed
 
 - Container
 - Section
 - Section Header
 - Technology Pill
+
+### Deliverables
+
+- Container
+- Section
+- SectionHeader
+- TechnologyPill
+- Design System Documentation
+- ADR-002
+- ADR-003
+- ADR-004
 
 ---
 
