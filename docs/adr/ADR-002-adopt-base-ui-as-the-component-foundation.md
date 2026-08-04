@@ -56,3 +56,11 @@ Reusable application components are created separately and consume these primiti
 
 - Introduces an external dependency.
 - Requires reviewing generated components when upgrading Base UI.
+
+## Alternatives Considered
+
+- Build custom UI components from scratch.
+- Use a fully designed component library.
+- Use Base UI as the component foundation.
+
+The third option was selected because it provides accessible primitives while allowing complete control over the application's design language.
