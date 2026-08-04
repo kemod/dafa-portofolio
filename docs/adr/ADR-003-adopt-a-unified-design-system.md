@@ -58,3 +58,7 @@ All future UI components should reference this document during development.
 
 - Less flexibility for isolated visual experiments.
 - Global design changes require updating shared guidelines.
+
+## References
+
+- docs/design-system.md

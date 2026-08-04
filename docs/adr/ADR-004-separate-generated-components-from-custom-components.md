@@ -51,3 +51,8 @@ Feature-specific components remain colocated inside their respective feature dir
 
 - Slightly deeper folder hierarchy.
 - Developers must understand the responsibility of each component layer.
+
+## References
+
+- ADR-002
+- docs/architecture.md

@@ -64,3 +64,7 @@ Reusable application components are created separately and consume these primiti
 - Use Base UI as the component foundation.
 
 The third option was selected because it provides accessible primitives while allowing complete control over the application's design language.
+
+## References
+
+- docs/architecture.md
