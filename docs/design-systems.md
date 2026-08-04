@@ -114,6 +114,85 @@ Animations should support usability instead of drawing unnecessary attention.
 
 # Components
 
+| Component | Responsibility |
+|-----------|----------------|
+| Container | Controls content width and horizontal padding. |
+| Section | Controls vertical spacing and semantic structure. |
+| SectionHeader | Displays section title and description. |
+| TechnologyPill | Displays technology metadata. |
+
+# Components
+
+## Container
+
+### Responsibility
+
+Controls content width and horizontal padding.
+
+### Usage
+
+```tsx
+<Container>
+  ...
+</Container>
+```
+
+### Rules
+
+- Controls maximum content width.
+- Applies horizontal padding.
+- Does not control vertical spacing.
+- Accepts additional HTML attributes.
+
+---
+
+## Section
+
+### Responsibility
+
+Defines a semantic page section and controls vertical spacing.
+
+### Usage
+
+```tsx
+<Section id="about">
+  <Container>
+    ...
+  </Container>
+</Section>
+```
+
+### Rules
+
+- Uses semantic `<section>` element.
+- Controls vertical spacing.
+- Does not control content width.
+- Supports additional HTML attributes.
+
+---
+
+## SectionHeader
+
+### Responsibility
+
+Displays section titles and descriptions while maintaining consistent typography.
+
+### Usage
+
+```tsx
+<SectionHeader
+  title="Projects"
+  description="A collection of selected projects."
+/>
+```
+
+### Rules
+
+- Supports `left` and `center` alignment.
+- Description is optional.
+- Does not control layout spacing.
+- Parent components control spacing.
+
 ## Common Components
 
 - Container
