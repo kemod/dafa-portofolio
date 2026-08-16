@@ -3,11 +3,13 @@ import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { TechnologyPill } from "@/components/common/technology-pill";
 import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
 
 export default function Home() {
   return (
     <>
-    <Hero />
+      <Hero />
+      <About />
       <Section>
         <Container>
           <div className="mb-12">
