@@ -61,7 +61,6 @@ Status: Completed
 - Navigation
 - Mobile Navigation
 - Footer
-- Skip-to-content
 - Navigation configuration
 - Root layout integration
 - Accessibility verification
@@ -71,7 +70,7 @@ Status: Completed
 
 ## Sprint 4 — Page Structure Foundation
 
-Status: Planning
+Status: Completed
 
 ### Deliverables
 
