@@ -1,45 +1,25 @@
-import { Container } from "@/components/common/container";
-import { Section } from "@/components/common/section";
-import { SectionHeader } from "@/components/common/section-header";
-import { TechnologyPill } from "@/components/common/technology-pill";
+import { About } from "@/components/sections/about";
+import { FeaturedProjects } from "@/components/sections/featured-projects";
+import { Hero } from "@/components/sections/hero";
+import { Experience } from "@/components/sections/experience";
+import { Technologies } from "@/components/sections/technologies";
+import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
     <>
-      <Section>
-        <Container>
-          <div className="mb-12">
-            <SectionHeader
-              title="Featured Projects"
-              description="A collection of selected software engineering and web development projects."
-            />
-          </div>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
-          <div className="mb-12">
-            <SectionHeader
-              align="center"
-              title="Technologies"
-              description="Tools and technologies I use to build modern web applications."
-            />
-          </div>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
-          <div className="flex flex-wrap gap-3">
-            <TechnologyPill icon="⚛️" name="React" />
+      <Hero />
 
-            <TechnologyPill icon="▲" name="Next.js" />
+      <About />
 
-            <TechnologyPill icon="📘" name="TypeScript" />
+      <FeaturedProjects />
 
-            <TechnologyPill icon="🐍" name="Python" />
-          </div>
-        </Container>
-      </Section>
+      <Experience />
+
+      <Technologies />
+
+      <Contact />
+
     </>
   );
 }
