@@ -1,31 +1,31 @@
-import type {
-  ComponentPropsWithoutRef,
-  ReactNode,
-} from "react";
+import type { ComponentType } from "react";
 
-import { cn } from "@/lib/utils";
+type TechnologyIconProps = {
+  size?: number;
+  className?: string;
+  color?: string;
+  title?: string;
+};
 
-type TechnologyPillProps = ComponentPropsWithoutRef<"div"> & {
+type TechnologyPillProps = {
+  icon: ComponentType<TechnologyIconProps>;
   name: string;
-  icon: ReactNode;
 };
 
 export function TechnologyPill({
+  icon: Icon,
   name,
-  icon,
-  className,
-  ...props
 }: TechnologyPillProps) {
   return (
-    <div
-      className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium",
-        className
-      )}
-      {...props}
-    >
-      {icon}
+    <span className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium">
+      <Icon
+        size={16}
+        color="default"
+        title={name}
+        className="shrink-0"
+      />
+
       <span>{name}</span>
-    </div>
+    </span>
   );
 }

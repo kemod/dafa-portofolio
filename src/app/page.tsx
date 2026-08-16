@@ -1,26 +1,28 @@
+import {
+  SiNextdotjs,
+  SiPython,
+  SiReact,
+  SiTypescript,
+} from "@icons-pack/react-simple-icons";
+
 import { Container } from "@/components/common/container";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { TechnologyPill } from "@/components/common/technology-pill";
-import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
+import { FeaturedProjects } from "@/components/sections/featured-projects";
+import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
   return (
     <>
       <Hero />
+
       <About />
-      <Section>
-        <Container>
-          <div className="mb-12">
-            <SectionHeader
-              title="Featured Projects"
-              description="A collection of selected software engineering and web development projects."
-            />
-          </div>
-        </Container>
-      </Section>
-      <Section>
+
+      <FeaturedProjects />
+
+      <Section id="technologies">
         <Container>
           <div className="mb-12">
             <SectionHeader
@@ -29,18 +31,27 @@ export default function Home() {
               description="Tools and technologies I use to build modern web applications."
             />
           </div>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
-          <div className="flex flex-wrap gap-3">
-            <TechnologyPill icon="⚛️" name="React" />
 
-            <TechnologyPill icon="▲" name="Next.js" />
+          <div className="flex flex-wrap justify-center gap-3">
+            <TechnologyPill
+              icon={SiReact}
+              name="React"
+            />
 
-            <TechnologyPill icon="📘" name="TypeScript" />
+            <TechnologyPill
+              icon={SiNextdotjs}
+              name="Next.js"
+            />
 
-            <TechnologyPill icon="🐍" name="Python" />
+            <TechnologyPill
+              icon={SiTypescript}
+              name="TypeScript"
+            />
+
+            <TechnologyPill
+              icon={SiPython}
+              name="Python"
+            />
           </div>
         </Container>
       </Section>
