@@ -69,9 +69,22 @@ Status: Completed
 
 ---
 
-## Sprint 4
+## Sprint 4 — Page Structure Foundation
 
-Hero Section
+Status: Planning
+
+### Deliverables
+
+- Hero Section
+- Downloadable CV
+- About Section
+- Featured Projects Section
+- Experience Section
+- Technologies Section
+- Contact Section
+- Responsive structure
+- Accessibility considerations
+- Production build verification
 
 ---
 
