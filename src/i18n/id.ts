@@ -129,4 +129,69 @@ committee: {
     },
   ],
 },
+
+experience: {
+  title: "Pengalaman",
+
+  description:
+    "Pilihan pengalaman profesional dan tanggung jawab yang pernah saya jalankan.",
+
+  label: "Pengalaman",
+
+  showMore: "Lihat Lebih Banyak",
+
+  showLess: "Lihat Lebih Sedikit",
+
+  items: [
+    {
+      role: "IT / Web Developer Freelance",
+
+      company: "Independent",
+
+      description:
+        "Mengembangkan aplikasi web dan produk digital melalui berbagai proyek independen dengan fokus pada teknologi web modern, antarmuka responsif, dan solusi digital yang praktis.",
+
+      highlights: [
+        "Mengembangkan Aurora, platform undangan pernikahan digital full-stack yang saat ini masih dalam tahap pengembangan.",
+        "Mengembangkan website portofolio pribadi yang responsif menggunakan Next.js, React, TypeScript, dan Tailwind CSS.",
+        "Mengembangkan website company profile Auctore Group dengan struktur komponen modular dan desain responsif.",
+      ],
+    },
+
+    {
+      role: "Administrator Marketplace",
+
+      company: "Routfits — Cimahi, Indonesia",
+
+      description:
+        "Mengelola operasional marketplace sehari-hari di Shopee, TikTok Shop, dan Tokopedia, mencakup pengelolaan produk, promosi, pesanan, aktivitas affiliate, dan interaksi dengan pelanggan.",
+
+      highlights: [
+        "Mengelola listing produk termasuk gambar produk, deskripsi, spesifikasi, harga, SKU, dan variasi.",
+        "Mengelola aktivitas promosi termasuk flash sale, diskon toko, campaign, dan voucher.",
+        "Mengelola pengaturan komisi affiliate dan iklan.",
+        "Memantau pesanan masuk untuk meminimalkan keterlambatan proses.",
+        "Menangani pengajuan banding pelanggaran marketplace dan masalah terkait akun.",
+        "Menanggapi pertanyaan dan ulasan pelanggan di berbagai platform marketplace.",
+      ],
+    },
+
+    {
+      role: "Staff Kualitas Layanan — Pelayanan Peserta",
+
+      company: "BPJS Kesehatan — Bandung, Indonesia",
+
+      description:
+        "Mendukung operasional pelayanan peserta selama menjalani program magang di BPJS Kesehatan, termasuk pengelolaan data, dukungan administrasi, dan aktivitas pelayanan peserta.",
+
+      highlights: [
+        "Mengelola dan memelihara data peserta.",
+        "Membantu menangani keluhan peserta dan informasi terkait pelayanan.",
+        "Memberikan dukungan administrasi untuk aktivitas pelayanan peserta sehari-hari.",
+        "Membantu mengomunikasikan dan menerapkan kebijakan organisasi.",
+        "Merancang dan mengembangkan website PANDAWA Helpdesk.",
+      ],
+    },
+  ],
+},
 };
