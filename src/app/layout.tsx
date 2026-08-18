@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { LanguageProvider } from "@/components/providers/language-provider";
 
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
 });
@@ -112,7 +112,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${sora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
