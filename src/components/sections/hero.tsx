@@ -31,7 +31,7 @@ export function Hero() {
             </Link>
 
             <a
-              href="/cv/dafa-cv.pdf"
+              href="/cv/Dafa-Setiandi-CV.pdf"
               download
               className="inline-flex h-10 items-center justify-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-muted"
             >
