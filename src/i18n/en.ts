@@ -254,4 +254,15 @@ technologies: {
     languages: "Languages",
   },
 },
+
+contact: {
+  label: "Contact",
+
+  headingLine1: "Let's Work",
+
+  headingLine2: "Together",
+
+  description:
+    "Have a project in mind or looking for a software engineer to join your team? Let's talk — I am always open to new opportunities.",
+},
 };

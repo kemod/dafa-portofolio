@@ -255,4 +255,15 @@ technologies: {
     languages: "Bahasa",
   },
 },
+
+contact: {
+  label: "Kontak",
+
+  headingLine1: "Mari Bekerja",
+
+  headingLine2: "Bersama",
+
+  description:
+    "Memiliki proyek atau sedang mencari software engineer untuk bergabung dengan tim Anda? Mari berdiskusi — saya selalu terbuka untuk kesempatan baru.",
+},
 };

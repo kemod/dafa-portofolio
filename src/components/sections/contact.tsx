@@ -1,8 +1,11 @@
+"use client";
+
 import { SiGithub } from "@icons-pack/react-simple-icons";
 
 import { Container } from "@/components/common/container";
 import { ScrollReveal } from "@/components/common/scroll-reveal";
 import { Section } from "@/components/common/section";
+import { useTranslation } from "@/i18n/use-translation";
 
 const email = "dafasetiandi20@gmail.com";
 
@@ -28,6 +31,8 @@ const contacts = [
 ];
 
 export function Contact() {
+  const t = useTranslation();
+
   return (
     <Section
       id="contact"
@@ -49,7 +54,7 @@ export function Contact() {
         <ScrollReveal>
           <div className="border-t border-white/10 pt-6">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/50">
-              Contact
+              {t.contact.label}
             </p>
           </div>
         </ScrollReveal>
@@ -58,11 +63,11 @@ export function Contact() {
         <ScrollReveal delay={100}>
           <div className="mt-12 max-w-4xl">
             <h2 className="font-heading text-5xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Let&apos;s Work
+              {t.contact.headingLine1}
             </h2>
 
             <h2 className="mt-1 font-heading text-5xl font-light uppercase leading-[0.9] tracking-[-0.04em] text-white/40 sm:text-6xl lg:text-7xl">
-              Together
+              {t.contact.headingLine2}
             </h2>
           </div>
         </ScrollReveal>
@@ -71,9 +76,7 @@ export function Contact() {
         <ScrollReveal delay={200}>
           <div className="mt-10 max-w-2xl">
             <p className="text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-              Have a project in mind or looking for a software engineer to
-              join your team? Let&apos;s talk — I am always open to new
-              opportunities.
+              {t.contact.description}
             </p>
           </div>
         </ScrollReveal>
@@ -85,8 +88,7 @@ export function Contact() {
               href={`mailto:${email}`}
               className="group inline-flex items-center gap-4"
             >
-              <span className="text-xl font-semibold text-white/90 underline decoration-white/25 underline-offset-8 transition-colors duration-300 group-hover:text-blue-400 group-hover:decoration-blue-400 sm:text-2xl"
-              >
+              <span className="text-xl font-semibold text-white/90 underline decoration-white/25 underline-offset-8 transition-colors duration-300 group-hover:text-blue-400 group-hover:decoration-blue-400 sm:text-2xl">
                 {email}
               </span>
 
