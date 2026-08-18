@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { LanguageSwitcher } from "@/components/common/language-switcher";
@@ -15,6 +15,24 @@ export function MobileNavigation() {
   function closeMenu() {
     setIsOpen(false);
   }
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   return (
     <div className="md:hidden">
@@ -50,6 +68,7 @@ export function MobileNavigation() {
       <nav
         id="mobile-navigation"
         aria-label="Mobile navigation"
+        aria-hidden={!isOpen}
         className={[
           "absolute inset-x-0 top-full z-50",
           "origin-top border-b border-border",
@@ -58,7 +77,7 @@ export function MobileNavigation() {
           "transition-all duration-300 ease-out",
           isOpen
             ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-2 pointer-events-none opacity-0",
+            : "invisible pointer-events-none -translate-y-2 opacity-0",
         ].join(" ")}
       >
         <div className="mx-auto w-full max-w-7xl px-6 py-4">
@@ -82,7 +101,8 @@ export function MobileNavigation() {
                 <Link
                   href={item.href}
                   onClick={closeMenu}
-                  className="group flex items-center justify-between rounded-md px-4 py-3 text-sm font-medium transition-all duration-300 hover:bg-primary/[0.06] hover:text-primary"
+                  tabIndex={isOpen ? 0 : -1}
+                  className="group flex items-center justify-between rounded-md px-4 py-3 text-sm font-medium transition-all duration-300 hover:bg-primary/[0.06] hover:text-primary focus-visible:bg-primary/[0.06] focus-visible:text-primary focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary"
                 >
                   <span className="transition-transform duration-300 group-hover:translate-x-0.5">
                     {t.nav[item.key]}
