@@ -36,7 +36,7 @@ export const education: Education = {
   period: "Sep 2020 — Feb 2025",
   thesis: {
     title:
-      "Prediksi Harga Properti di Bandung Raya Menggunakan Metode K-Nearest Neighbors Regression",
+      "Prediksi Penjualan Harga Properti di Bandung Raya Menggunakan Metode K-Nearest Neighbors Regression",
     technologies: [
       {
         name: "Python",

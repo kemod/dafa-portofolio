@@ -1,8 +1,12 @@
+"use client";
+
 import { Container } from "@/components/common/container";
+import { ScrollReveal } from "@/components/common/scroll-reveal";
 import { TechnologyPill } from "@/components/common/technology-pill";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { technologies } from "@/config/technologies";
+import { useTranslation } from "@/i18n/use-translation";
 
 const webDevelopment = [
   "Next.js",
@@ -81,12 +85,19 @@ function TechnologyGroup({
   items: string[];
 }) {
   return (
-    <div className="text-center">
-      <h3 className="mb-4 text-sm font-semibold tracking-tight">
-        {title}
-      </h3>
+    <div className="group rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-sm sm:p-7">
+      <div className="mb-5 flex items-center gap-3">
+        <span
+          aria-hidden="true"
+          className="h-2 w-2 rounded-full bg-primary transition-transform duration-300 group-hover:scale-125"
+        />
 
-      <div className="flex flex-wrap justify-center gap-2">
+        <h3 className="font-heading text-sm font-semibold tracking-tight">
+          {title}
+        </h3>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
         {items.map((item) => {
           const technology = technologyMap.get(item);
 
@@ -94,7 +105,7 @@ function TechnologyGroup({
             return (
               <span
                 key={item}
-                className="rounded-full border px-3 py-1.5 text-xs font-medium"
+                className="inline-flex items-center rounded-full border bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all duration-300 hover:border-primary/30 hover:bg-primary/5 hover:text-foreground"
               >
                 {item}
               </span>
@@ -115,57 +126,68 @@ function TechnologyGroup({
 }
 
 export function Technologies() {
+  const t = useTranslation();
+
+  const groups = [
+    {
+      title: t.technologies.groups.webDevelopment,
+      items: webDevelopment,
+    },
+    {
+      title: t.technologies.groups.backendDatabase,
+      items: backendDatabase,
+    },
+    {
+      title: t.technologies.groups.dataMachineLearning,
+      items: dataMachineLearning,
+    },
+    {
+      title: t.technologies.groups.ecommerce,
+      items: ecommerce,
+    },
+    {
+      title: t.technologies.groups.tools,
+      items: tools,
+    },
+    {
+      title: t.technologies.groups.other,
+      items: otherSkills,
+    },
+    {
+      title: t.technologies.groups.softSkills,
+      items: softSkills,
+    },
+    {
+      title: t.technologies.groups.languages,
+      items: languages,
+    },
+  ];
+
   return (
     <Section id="technologies">
       <Container>
-        <div className="mb-12 flex justify-center text-center">
-          <SectionHeader
-            align="center"
-            title="Skills & Technologies"
-            description="Technical skills, tools, and professional capabilities developed through academic, professional, and independent projects."
-          />
-        </div>
+        <ScrollReveal>
+          <div className="mb-12 flex justify-center text-center">
+            <SectionHeader
+              align="center"
+              title={t.technologies.title}
+              description={t.technologies.description}
+            />
+          </div>
+        </ScrollReveal>
 
-        <div className="mx-auto max-w-5xl space-y-10">
-          <TechnologyGroup
-            title="Web Development"
-            items={webDevelopment}
-          />
-
-          <TechnologyGroup
-            title="Backend & Database"
-            items={backendDatabase}
-          />
-
-          <TechnologyGroup
-            title="Data & Machine Learning"
-            items={dataMachineLearning}
-          />
-
-          <TechnologyGroup
-            title="E-Commerce"
-            items={ecommerce}
-          />
-
-          <TechnologyGroup
-            title="Tools"
-            items={tools}
-          />
-
-          <TechnologyGroup
-            title="Other"
-            items={otherSkills}
-          />
-
-          <TechnologyGroup
-            title="Soft Skills"
-            items={softSkills}
-          />
-
-          <TechnologyGroup
-            title="Languages"
-            items={languages}
-          />
+        <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
+          {groups.map((group, index) => (
+            <ScrollReveal
+              key={group.title}
+              delay={index * 80}
+            >
+              <TechnologyGroup
+                title={group.title}
+                items={group.items}
+              />
+            </ScrollReveal>
+          ))}
         </div>
       </Container>
     </Section>
