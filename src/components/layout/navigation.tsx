@@ -16,7 +16,7 @@ export function Navigation() {
 
               <span
                 aria-hidden="true"
-                className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-foreground transition-transform duration-300 ease-out group-hover:scale-x-100"
+                className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100"
               />
             </Link>
           </li>

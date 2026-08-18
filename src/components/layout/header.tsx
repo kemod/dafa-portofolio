@@ -2,8 +2,8 @@ import type { ComponentPropsWithoutRef } from "react";
 
 import { Container } from "@/components/common/container";
 import { cn } from "@/lib/utils";
-import { Navigation } from "./navigation";
 import { MobileNavigation } from "./mobile-navigation";
+import { Navigation } from "./navigation";
 
 type HeaderProps = ComponentPropsWithoutRef<"header">;
 
@@ -14,18 +14,18 @@ export function Header({
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md",
+        "relative z-50 w-full border-b bg-background",
         className,
       )}
       {...props}
     >
-      <Container className="flex h-18 items-center justify-between">
+      <Container className="flex min-h-16 items-center justify-between">
         <a
           href="/"
-          className="text-base font-semibold tracking-tight transition-opacity hover:opacity-70"
+          className="font-semibold tracking-tight transition-opacity hover:opacity-70"
           aria-label="Dafa Setiandi — Home"
         >
-          Dafa Setiandi
+          Dafa
         </a>
 
         <div className="hidden md:block">

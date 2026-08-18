@@ -42,7 +42,7 @@ export function MobileNavigation() {
             {navigation.map((item, index) => (
               <li
                 key={item.href}
-                className="animate-in fade-in slide-in-from-top-1"
+                className="animate-in fill-mode-both fade-in slide-in-from-top-1"
                 style={{
                   animationDelay: `${index * 40}ms`,
                   animationFillMode: "both",
@@ -51,7 +51,7 @@ export function MobileNavigation() {
                 <Link
                   href={item.href}
                   onClick={closeMenu}
-                  className="flex min-h-11 items-center rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring"
+                  className="flex min-h-11 items-center rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring"
                 >
                   {item.label}
                 </Link>
