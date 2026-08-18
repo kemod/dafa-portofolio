@@ -1,10 +1,10 @@
 import type { ComponentPropsWithoutRef } from "react";
 
 import { Container } from "@/components/common/container";
+import { LanguageSwitcher } from "@/components/common/language-switcher";
 import { cn } from "@/lib/utils";
 import { MobileNavigation } from "./mobile-navigation";
 import { Navigation } from "./navigation";
-import { LanguageSwitcher } from "@/components/common/language-switcher";
 
 type HeaderProps = ComponentPropsWithoutRef<"header">;
 

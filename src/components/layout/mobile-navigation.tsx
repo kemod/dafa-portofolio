@@ -5,9 +5,12 @@ import Link from "next/link";
 
 import { LanguageSwitcher } from "@/components/common/language-switcher";
 import { navigation } from "@/config/navigation";
+import { useTranslation } from "@/i18n/use-translation";
 
 export function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const t = useTranslation();
 
   function closeMenu() {
     setIsOpen(false);
@@ -43,7 +46,7 @@ export function MobileNavigation() {
         </span>
       </button>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       <nav
         id="mobile-navigation"
         aria-label="Mobile navigation"
@@ -55,7 +58,7 @@ export function MobileNavigation() {
           "transition-all duration-300 ease-out",
           isOpen
             ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-2 opacity-0 pointer-events-none",
+            : "invisible -translate-y-2 pointer-events-none opacity-0",
         ].join(" ")}
       >
         <div className="mx-auto w-full max-w-7xl px-6 py-4">
@@ -82,7 +85,7 @@ export function MobileNavigation() {
                   className="group flex items-center justify-between rounded-md px-4 py-3 text-sm font-medium transition-all duration-300 hover:bg-primary/[0.06] hover:text-primary"
                 >
                   <span className="transition-transform duration-300 group-hover:translate-x-0.5">
-                    {item.label}
+                    {t.nav[item.key]}
                   </span>
 
                   <span
@@ -96,7 +99,7 @@ export function MobileNavigation() {
             ))}
           </ul>
 
-          {/* Language */}
+          {/* Language Selector */}
           <div
             className={[
               "mt-4 border-t border-border pt-4",
@@ -111,7 +114,7 @@ export function MobileNavigation() {
                 : "0ms",
             }}
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.15em]">
                   Language
