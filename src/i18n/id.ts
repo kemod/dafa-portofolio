@@ -237,4 +237,22 @@ projects: {
     },
   ],
 },
+
+technologies: {
+  title: "Keahlian & Teknologi",
+
+  description:
+    "Keahlian teknis, tools, dan kemampuan profesional yang dikembangkan melalui proyek akademik, profesional, dan independen.",
+
+  groups: {
+    webDevelopment: "Pengembangan Web",
+    backendDatabase: "Backend & Database",
+    dataMachineLearning: "Data & Machine Learning",
+    ecommerce: "E-Commerce",
+    tools: "Tools",
+    other: "Lainnya",
+    softSkills: "Soft Skills",
+    languages: "Bahasa",
+  },
+},
 };

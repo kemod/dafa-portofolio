@@ -236,4 +236,22 @@ projects: {
 
   liveDemo: "Live Demo",
 },
+
+technologies: {
+  title: "Skills & Technologies",
+
+  description:
+    "Technical skills, tools, and professional capabilities developed through academic, professional, and independent projects.",
+
+  groups: {
+    webDevelopment: "Web Development",
+    backendDatabase: "Backend & Database",
+    dataMachineLearning: "Data & Machine Learning",
+    ecommerce: "E-Commerce",
+    tools: "Tools",
+    other: "Other",
+    softSkills: "Soft Skills",
+    languages: "Languages",
+  },
+},
 };

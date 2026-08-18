@@ -1,9 +1,12 @@
+"use client";
+
 import { Container } from "@/components/common/container";
 import { ScrollReveal } from "@/components/common/scroll-reveal";
 import { TechnologyPill } from "@/components/common/technology-pill";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { technologies } from "@/config/technologies";
+import { useTranslation } from "@/i18n/use-translation";
 
 const webDevelopment = [
   "Next.js",
@@ -123,37 +126,39 @@ function TechnologyGroup({
 }
 
 export function Technologies() {
+  const t = useTranslation();
+
   const groups = [
     {
-      title: "Web Development",
+      title: t.technologies.groups.webDevelopment,
       items: webDevelopment,
     },
     {
-      title: "Backend & Database",
+      title: t.technologies.groups.backendDatabase,
       items: backendDatabase,
     },
     {
-      title: "Data & Machine Learning",
+      title: t.technologies.groups.dataMachineLearning,
       items: dataMachineLearning,
     },
     {
-      title: "E-Commerce",
+      title: t.technologies.groups.ecommerce,
       items: ecommerce,
     },
     {
-      title: "Tools",
+      title: t.technologies.groups.tools,
       items: tools,
     },
     {
-      title: "Other",
+      title: t.technologies.groups.other,
       items: otherSkills,
     },
     {
-      title: "Soft Skills",
+      title: t.technologies.groups.softSkills,
       items: softSkills,
     },
     {
-      title: "Languages",
+      title: t.technologies.groups.languages,
       items: languages,
     },
   ];
@@ -165,8 +170,8 @@ export function Technologies() {
           <div className="mb-12 flex justify-center text-center">
             <SectionHeader
               align="center"
-              title="Skills & Technologies"
-              description="Technical skills, tools, and professional capabilities developed through academic, professional, and independent projects."
+              title={t.technologies.title}
+              description={t.technologies.description}
             />
           </div>
         </ScrollReveal>
