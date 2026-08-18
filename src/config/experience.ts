@@ -8,27 +8,44 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Software Engineer",
-    company: "Company Name",
-    period: "2026 — Present",
+    role: "Freelance IT / Web Developer",
+    company: "Independent",
+    period: "2026 - Present",
     description:
-      "Building and maintaining modern web applications with a focus on scalable architecture and user experience.",
+      "Developing web applications and digital products through independent projects, with a focus on modern web technologies, responsive interfaces, and practical digital solutions.",
     highlights: [
-      "Developed responsive web interfaces using modern frontend technologies.",
-      "Worked with reusable components and maintainable application architecture.",
-      "Collaborated with stakeholders to deliver practical digital solutions.",
+      "Developed Aurora, a full-stack digital wedding invitation platform currently in development.",
+      "Developed a responsive personal portfolio website using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Developed the Auctore Group company profile website with a modular component structure and responsive design.",
     ],
   },
   {
-    role: "Frontend Developer",
-    company: "Company Name",
-    period: "2025 — 2026",
+    role: "Marketplace Administrator",
+    company: "Routfits — Cimahi, Indonesia",
+    period: "Mar 2025 — Apr 2026",
     description:
-      "Focused on developing responsive interfaces and improving the usability of web applications.",
+      "Managed day-to-day marketplace operations across Shopee, TikTok Shop, and Tokopedia, covering product management, promotions, orders, affiliate activities, and customer interactions.",
     highlights: [
-      "Built reusable UI components.",
-      "Improved responsive behavior across desktop and mobile devices.",
-      "Integrated frontend interfaces with application services.",
+      "Managed product listings including product images, descriptions, specifications, pricing, SKUs, and variants.",
+      "Managed promotional activities including flash sales, store discounts, campaigns, and vouchers.",
+      "Managed affiliate and advertising commission settings.",
+      "Monitored incoming orders to minimize processing delays.",
+      "Handled marketplace violation appeals and account-related issues.",
+      "Responded to customer inquiries and reviews across marketplace platforms.",
+    ],
+  },
+  {
+    role: "Service Quality Staff — Participant Services",
+    company: "BPJS Kesehatan — Bandung, Indonesia",
+    period: "Aug 2023 — Sep 2023",
+    description:
+      "Supported participant service operations during an internship at BPJS Kesehatan, including data management, administrative support, and participant service activities.",
+    highlights: [
+      "Managed and maintained participant data.",
+      "Assisted in handling participant complaints and service-related information.",
+      "Provided administrative support for daily participant service activities.",
+      "Assisted in communicating and implementing organizational policies.",
+      "Designed and developed the PANDAWA Helpdesk website.",
     ],
   },
 ];

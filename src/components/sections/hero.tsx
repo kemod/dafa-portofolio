@@ -8,6 +8,21 @@ export function Hero() {
     <Section className="flex min-h-[calc(100vh-4rem)] items-center">
       <Container>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full bg-emerald-500"
+              />
+
+              Available for Work
+            </div>
+
+            <p className="mt-3 text-sm text-muted-foreground">
+              Open to full-time, freelance, and remote opportunities.
+            </p>
+          </div>
+
           <p className="mb-4 text-sm font-medium text-muted-foreground">
             SOFTWARE ENGINEER
           </p>
@@ -31,7 +46,7 @@ export function Hero() {
             </Link>
 
             <a
-              href="/cv/dafa-cv.pdf"
+              href="/cv/Dafa-Setiandi-CV.pdf"
               download
               className="inline-flex h-10 items-center justify-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-muted"
             >

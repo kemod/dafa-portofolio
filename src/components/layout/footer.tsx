@@ -14,9 +14,13 @@ export function Footer({
       className={cn("w-full border-t", className)}
       {...props}
     >
-      <Container className="flex min-h-16 items-center justify-center">
+      <Container className="flex min-h-16 flex-col items-center justify-center gap-2 py-4 sm:flex-row sm:justify-between">
         <p className="text-sm text-muted-foreground">
-          © 2026 Dafa. All rights reserved.
+          © 2026 Dafa Setiandi. All rights reserved.
+        </p>
+
+        <p className="text-xs text-muted-foreground">
+          Built with Next.js &amp; TypeScript
         </p>
       </Container>
     </footer>

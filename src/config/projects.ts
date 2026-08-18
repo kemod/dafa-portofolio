@@ -1,4 +1,5 @@
 import {
+  SiFlask,
   SiNextdotjs,
   SiNodedotjs,
   SiPython,
@@ -24,17 +25,50 @@ export type Project = {
   description: string;
   technologies: ProjectTechnology[];
   href?: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Aurora",
     description:
-      "A modern web application focused on delivering a clean and practical user experience.",
+      "A full-stack digital wedding invitation platform currently in development, designed with a modular architecture and modern web technologies.",
     technologies: [
       {
         name: "Next.js",
         icon: SiNextdotjs,
+      },
+      {
+        name: "React",
+        icon: SiReact,
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+      },
+      {
+        name: "Node.js",
+        icon: SiNodedotjs,
+      },
+    ],
+  },
+
+  {
+    title: "Personal Portfolio Website",
+    description:
+      "A responsive personal portfolio website showcasing professional experience, selected projects, technical skills, and academic background.",
+    technologies: [
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+      },
+      {
+        name: "React",
+        icon: SiReact,
       },
       {
         name: "TypeScript",
@@ -45,12 +79,18 @@ export const projects: Project[] = [
         icon: SiTailwindcss,
       },
     ],
+    href: "https://dikril-hakim.vercel.app",
   },
+
   {
-    title: "Project Two",
+    title: "Auctore Group Company Profile",
     description:
-      "A responsive digital product built with maintainable architecture and modern web technologies.",
+      "A responsive company profile website built with a modular component structure and a focus on maintainability, responsive design, and SEO.",
     technologies: [
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+      },
       {
         name: "React",
         icon: SiReact,
@@ -60,27 +100,25 @@ export const projects: Project[] = [
         icon: SiTypescript,
       },
       {
-        name: "Node.js",
-        icon: SiNodedotjs,
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
       },
     ],
+    href: "https://auctore-group.vercel.app",
   },
+
   {
-    title: "Project Three",
+    title: "Property Price Prediction",
     description:
-      "An application designed to solve practical problems through thoughtful product and engineering decisions.",
+      "An academic machine learning project for predicting property prices in the Greater Bandung Area using the K-Nearest Neighbors Regression method.",
     technologies: [
-      {
-        name: "Next.js",
-        icon: SiNextdotjs,
-      },
-      {
-        name: "TypeScript",
-        icon: SiTypescript,
-      },
       {
         name: "Python",
         icon: SiPython,
+      },
+      {
+        name: "Flask",
+        icon: SiFlask,
       },
     ],
   },
