@@ -49,6 +49,9 @@ export function LanguageSwitcher() {
             key={item.value}
             type="button"
             onClick={() => setLanguage(item.value)}
+            aria-label={`Switch language to ${
+              item.value === "en" ? "English" : "Indonesian"
+            }`}
             aria-pressed={isActive}
             className={[
               "relative z-10 min-w-9 rounded-full px-3 py-1.5",
