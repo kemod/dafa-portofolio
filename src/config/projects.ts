@@ -79,6 +79,7 @@ export const projects: Project[] = [
         icon: SiTailwindcss,
       },
     ],
+    image: "/projects/preview-dikril.png",
     href: "https://dikril-hakim.vercel.app",
   },
 
@@ -104,6 +105,7 @@ export const projects: Project[] = [
         icon: SiTailwindcss,
       },
     ],
+    image: "/projects/preview-auctore.png",
     href: "https://auctore-group.vercel.app",
   },
 
@@ -121,5 +123,6 @@ export const projects: Project[] = [
         icon: SiFlask,
       },
     ],
+    image: "/projects/preview-ta.jpeg",
   },
 ];

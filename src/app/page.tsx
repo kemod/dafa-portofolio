@@ -1,34 +1,38 @@
 import { About } from "@/components/sections/about";
-import { FeaturedProjects } from "@/components/sections/featured-projects";
-import { Hero } from "@/components/sections/hero";
-import { Experience } from "@/components/sections/experience";
-import { Technologies } from "@/components/sections/technologies";
+import { Committee } from "@/components/sections/committee";
 import { Contact } from "@/components/sections/contact";
 import { Education } from "@/components/sections/education";
+import { Experience } from "@/components/sections/experience";
+import { FeaturedProjects } from "@/components/sections/featured-projects";
+import { Hero } from "@/components/sections/hero";
 import { Organizational } from "@/components/sections/organizational";
-import { Committee } from "@/components/sections/committee";
+import { Technologies } from "@/components/sections/technologies";
+import { Header } from "@/components/layout/header";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Header />
 
-      <About />
+      <main>
+        <Hero />
 
-      <Education />
+        <About />
 
-      <Organizational />
+        <Education />
 
-      <Committee />
+        <Organizational />
 
-      <Experience />
+        <Committee />
 
-      <FeaturedProjects />
+        <Experience />
 
-      <Technologies />
+        <FeaturedProjects />
 
-      <Contact />
+        <Technologies />
 
+        <Contact />
+      </main>
     </>
   );
 }
