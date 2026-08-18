@@ -1,10 +1,24 @@
+"use client";
+
+import { useState } from "react";
+
 import { Container } from "@/components/common/container";
 import { ScrollReveal } from "@/components/common/scroll-reveal";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { experiences } from "@/config/experience";
 
+const INITIAL_VISIBLE_COUNT = 2;
+
 export function Experience() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleExperiences = showAll
+    ? experiences
+    : experiences.slice(0, INITIAL_VISIBLE_COUNT);
+
+  const hasMoreExperiences = experiences.length > INITIAL_VISIBLE_COUNT;
+
   return (
     <Section id="experience">
       <Container>
@@ -26,8 +40,8 @@ export function Experience() {
             className="absolute bottom-0 left-[5px] top-0 w-px bg-border sm:left-[7px]"
           />
 
-          <div className="space-y-10">
-            {experiences.map((experience, index) => (
+          <div className="space-y-8">
+            {visibleExperiences.map((experience, index) => (
               <ScrollReveal
                 key={`${experience.company}-${experience.role}-${experience.period}`}
                 delay={index * 120}
@@ -86,6 +100,31 @@ export function Experience() {
             ))}
           </div>
         </div>
+
+        {/* Show More / Show Less */}
+        {hasMoreExperiences && (
+          <ScrollReveal delay={100}>
+            <div className="mt-10 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setShowAll((current) => !current)}
+                aria-expanded={showAll}
+                className="group inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/[0.03] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+              >
+                <span>
+                  {showAll ? "Show Less" : "Show More"}
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-y-0.5"
+                >
+                  {showAll ? "↑" : "↓"}
+                </span>
+              </button>
+            </div>
+          </ScrollReveal>
+        )}
       </Container>
     </Section>
   );

@@ -51,7 +51,7 @@ export function FeaturedProjects() {
                 className="group inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 <span>
-                  {showAll ? "Show Less" : "Read More"}
+                  {showAll ? "Show Less" : "Show More"}
                 </span>
 
                 <span
