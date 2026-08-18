@@ -31,7 +31,11 @@ export function FeaturedProjects() {
         </ScrollReveal>
 
         {/* Projects */}
-        <div className="space-y-8">
+        <div
+          id="projects-list"
+          className="space-y-8"
+          aria-live="polite"
+        >
           {visibleProjects.map((project, index) => {
             const translation = t.projects.items[index];
 
@@ -60,6 +64,8 @@ export function FeaturedProjects() {
               <button
                 type="button"
                 onClick={() => setShowAll((current) => !current)}
+                aria-expanded={showAll}
+                aria-controls="projects-list"
                 className="group inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 <span>
