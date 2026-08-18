@@ -6,6 +6,7 @@ import { Technologies } from "@/components/sections/technologies";
 import { Contact } from "@/components/sections/contact";
 import { Education } from "@/components/sections/education";
 import { Organizational } from "@/components/sections/organizational";
+import { Committee } from "@/components/sections/committee";
 
 export default function Home() {
   return (
@@ -18,9 +19,13 @@ export default function Home() {
 
       <Organizational />
 
-      <FeaturedProjects />
+      <Committee />
 
       <Experience />
+
+      <FeaturedProjects />
+
+      
 
       <Technologies />
 
