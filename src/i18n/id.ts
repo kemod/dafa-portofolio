@@ -30,4 +30,29 @@ export const id = {
 
     contact: "Hubungi Saya",
   },
+
+  about: {
+    title: "Tentang Saya",
+
+    description:
+      "Lulusan Informatika dengan pengalaman di bidang pengembangan web, operasional e-commerce, dan teknologi digital.",
+
+    paragraph1:
+      "Saya merupakan lulusan Informatika dari Universitas Jenderal Achmad Yani dengan pengalaman profesional di bidang operasional e-commerce, khususnya Shopee, TikTok Shop, dan Tokopedia.",
+
+    paragraph2:
+      "Selain pengalaman di bidang e-commerce, saya memiliki pengalaman langsung dalam membangun website dan aplikasi web melalui berbagai proyek profesional, akademik, organisasi, dan independen. Minat teknis saya mencakup pengembangan web modern, teknologi backend, database, dan machine learning.",
+
+    paragraph3:
+      "Saya senang mengubah ide menjadi solusi digital yang praktis sambil terus meningkatkan kemampuan teknis, kemampuan memecahkan masalah, serta pemahaman terhadap teknologi modern.",
+  },
+
+  education: {
+    title: "Pendidikan",
+
+    description:
+      "Latar belakang akademik dan proyek akademik saya.",
+
+    academicProject: "Proyek Akademik",
+  },
 };

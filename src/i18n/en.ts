@@ -30,4 +30,29 @@ export const en = {
 
     contact: "Contact Me",
   },
+
+  about: {
+    title: "About Me",
+
+    description:
+      "Informatics graduate with experience across web development, e-commerce operations, and digital technologies.",
+
+    paragraph1:
+      "I am an Informatics graduate from Universitas Jenderal Achmad Yani with professional experience in e-commerce operations, particularly across Shopee, TikTok Shop, and Tokopedia.",
+
+    paragraph2:
+      "Alongside my e-commerce experience, I have hands-on experience building websites and web applications through professional, academic, organizational, and independent projects. My technical interests include modern web development, backend technologies, databases, and machine learning.",
+
+    paragraph3:
+      "I enjoy turning ideas into practical digital solutions while continuously improving my technical skills, problem-solving abilities, and understanding of modern technologies.",
+  },
+
+  education: {
+    title: "Education",
+
+    description:
+      "My academic background and academic project.",
+
+    academicProject: "Academic Project",
+  },
 };
