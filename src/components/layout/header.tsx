@@ -13,23 +13,28 @@ export function Header({
 }: HeaderProps) {
   return (
     <header
-      className={cn("relative w-full border-b", className)}
+      className={cn(
+        "sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md",
+        className,
+      )}
       {...props}
     >
-      <Container className="flex min-h-16 items-center justify-between">
+      <Container className="flex h-18 items-center justify-between">
         <a
           href="/"
-          className="font-semibold tracking-tight"
-          aria-label="Home"
+          className="text-base font-semibold tracking-tight transition-opacity hover:opacity-70"
+          aria-label="Dafa Setiandi — Home"
         >
-          Dafa
+          Dafa Setiandi
         </a>
 
         <div className="hidden md:block">
           <Navigation />
         </div>
 
-        <MobileNavigation />
+        <div className="md:hidden">
+          <MobileNavigation />
+        </div>
       </Container>
     </header>
   );
