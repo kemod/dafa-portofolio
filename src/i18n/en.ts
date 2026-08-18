@@ -10,49 +10,67 @@ export const en = {
     contact: "Contact",
   },
 
-  hero: {
-    available: "Available for Work",
+ hero: {
+  available: "Available for Work",
 
-    availability: "Open to full-time, freelance, and remote opportunities.",
+  availability:
+    "Open to full-time, freelance, and remote opportunities.",
 
-    role: "Software Engineer",
+  role: "SOFTWARE ENGINEER",
 
-    title:
-      "Building thoughtful digital experiences with modern web technologies.",
+  title:
+    "Dafa Setiandi — Software Engineer & Web Developer",
 
-    description:
-      "I build modern, responsive, and user-focused web applications with a strong focus on clean architecture and maintainable code.",
+  description:
+    "I build modern, responsive, and user-focused web applications with a strong focus on clean architecture and maintainable code.",
 
-    viewProjects: "View Projects",
+  viewProjects: "View Projects",
 
-    downloadCv: "Download CV",
+  downloadCv: "Download CV",
 
-    contact: "Contact Me",
-  },
+  contact: "Contact Me",
+},
 
   about: {
-    title: "About Me",
+  title: "About Me",
 
+  description:
+    "Informatics graduate with experience across web development, e-commerce operations, and digital technologies.",
+
+  paragraph1:
+    "I am an Informatics graduate from Universitas Jenderal Achmad Yani with professional experience in e-commerce operations, particularly across Shopee, TikTok Shop, and Tokopedia.",
+
+  paragraph2:
+    "Alongside my e-commerce experience, I have hands-on experience building websites and web applications through professional, academic, organizational, and independent projects. My technical interests include modern web development, backend technologies, databases, and machine learning.",
+
+  paragraph3:
+    "I enjoy turning ideas into practical digital solutions while continuously improving my technical skills, problem-solving abilities, and understanding of modern technologies.",
+
+  focus: {
+    label: "Focus",
+    title: "Modern Web Development",
     description:
-      "Informatics graduate with experience across web development, e-commerce operations, and digital technologies.",
-
-    paragraph1:
-      "I am an Informatics graduate from Universitas Jenderal Achmad Yani with professional experience in e-commerce operations, particularly across Shopee, TikTok Shop, and Tokopedia.",
-
-    paragraph2:
-      "Alongside my e-commerce experience, I have hands-on experience building websites and web applications through professional, academic, organizational, and independent projects. My technical interests include modern web development, backend technologies, databases, and machine learning.",
-
-    paragraph3:
-      "I enjoy turning ideas into practical digital solutions while continuously improving my technical skills, problem-solving abilities, and understanding of modern technologies.",
+      "Building practical and maintainable web applications.",
   },
 
-  education: {
-    title: "Education",
-
-    description: "My academic background and academic project.",
-
-    academicProject: "Academic Project",
+  interests: {
+    label: "Interests",
+    title: "Backend, Database & ML",
+    description:
+      "Exploring technologies that turn ideas into useful solutions.",
   },
+},
+
+ education: {
+  title: "Education",
+
+  description:
+    "My academic background and academic project.",
+
+  label: "Education",
+
+  academicProject: "Academic Project",
+},
 
   organizational: {
   title: "Organizational Experience",

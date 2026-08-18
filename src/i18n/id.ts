@@ -10,51 +10,68 @@ export const id = {
     contact: "Kontak",
   },
 
-  hero: {
-    available: "Terbuka untuk Kesempatan Kerja",
+ hero: {
+  available: "Terbuka untuk Kesempatan Kerja",
 
-    availability:
-      "Terbuka untuk pekerjaan full-time, freelance, dan remote.",
+  availability:
+    "Terbuka untuk pekerjaan full-time, freelance, dan remote.",
 
-    role: "Software Engineer",
+  role: "SOFTWARE ENGINEER",
 
-    title:
-      "Membangun pengalaman digital yang bermakna dengan teknologi web modern.",
+  title:
+    "Dafa Setiandi — Software Engineer & Web Developer",
 
-    description:
-      "Saya membangun aplikasi web modern, responsif, dan berorientasi pada pengguna dengan fokus pada arsitektur yang bersih dan kode yang mudah dipelihara.",
+  description:
+    "Saya membangun aplikasi web modern, responsif, dan berorientasi pada pengguna dengan fokus pada arsitektur yang bersih dan kode yang mudah dipelihara.",
 
-    viewProjects: "Lihat Proyek",
+  viewProjects: "Lihat Proyek",
 
-    downloadCv: "Unduh CV",
+  downloadCv: "Unduh CV",
 
-    contact: "Hubungi Saya",
-  },
+  contact: "Hubungi Saya",
+},
 
   about: {
-    title: "Tentang Saya",
+  title: "Tentang Saya",
 
+  description:
+    "Lulusan Informatika dengan pengalaman di bidang pengembangan web, operasional e-commerce, dan teknologi digital.",
+
+  paragraph1:
+    "Saya merupakan lulusan Informatika dari Universitas Jenderal Achmad Yani dengan pengalaman profesional di bidang operasional e-commerce, khususnya Shopee, TikTok Shop, dan Tokopedia.",
+
+  paragraph2:
+    "Selain pengalaman di bidang e-commerce, saya memiliki pengalaman langsung dalam membangun website dan aplikasi web melalui berbagai proyek profesional, akademik, organisasi, dan independen. Minat teknis saya mencakup pengembangan web modern, teknologi backend, database, dan machine learning.",
+
+  paragraph3:
+    "Saya senang mengubah ide menjadi solusi digital yang praktis sambil terus meningkatkan kemampuan teknis, kemampuan memecahkan masalah, serta pemahaman terhadap teknologi modern.",
+
+  focus: {
+    label: "Fokus",
+    title: "Pengembangan Web Modern",
     description:
-      "Lulusan Informatika dengan pengalaman di bidang pengembangan web, operasional e-commerce, dan teknologi digital.",
-
-    paragraph1:
-      "Saya merupakan lulusan Informatika dari Universitas Jenderal Achmad Yani dengan pengalaman profesional di bidang operasional e-commerce, khususnya Shopee, TikTok Shop, dan Tokopedia.",
-
-    paragraph2:
-      "Selain pengalaman di bidang e-commerce, saya memiliki pengalaman langsung dalam membangun website dan aplikasi web melalui berbagai proyek profesional, akademik, organisasi, dan independen. Minat teknis saya mencakup pengembangan web modern, teknologi backend, database, dan machine learning.",
-
-    paragraph3:
-      "Saya senang mengubah ide menjadi solusi digital yang praktis sambil terus meningkatkan kemampuan teknis, kemampuan memecahkan masalah, serta pemahaman terhadap teknologi modern.",
+      "Membangun aplikasi web yang praktis dan mudah dipelihara.",
   },
 
+  interests: {
+    label: "Minat",
+    title: "Backend, Database & ML",
+    description:
+      "Mengeksplorasi teknologi yang dapat mengubah ide menjadi solusi yang bermanfaat.",
+  },
+},
+
+  
   education: {
-    title: "Pendidikan",
+  title: "Pendidikan",
 
-    description:
-      "Latar belakang akademik dan proyek akademik saya.",
+  description:
+    "Latar belakang akademik dan proyek akademik saya.",
 
-    academicProject: "Proyek Akademik",
-  },
+  label: "Pendidikan",
+
+  academicProject: "Proyek Akademik",
+},
 
   organizational: {
   title: "Pengalaman Organisasi",

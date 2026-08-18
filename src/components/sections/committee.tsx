@@ -22,51 +22,68 @@ export function Committee() {
           </div>
         </ScrollReveal>
 
-        <div className="space-y-10">
+        <div className="relative space-y-8">
+          {/* Timeline */}
+          <div
+            aria-hidden="true"
+            className="absolute left-[11px] top-4 bottom-4 w-px bg-border"
+          />
+
           {committeeExperiences.map((experience, index) => {
             const translation = t.committee.experiences[index];
 
             return (
               <ScrollReveal
                 key={`${experience.event}-${experience.role}-${experience.period}`}
-                delay={index * 100}
+                delay={index * 120}
               >
-                <article className="group border-l pl-6 sm:pl-8">
-                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <h3 className="text-lg font-semibold tracking-tight transition-colors duration-300 group-hover:text-primary">
-                        {translation.role}
-                      </h3>
+                <article className="group relative pl-10">
+                  {/* Timeline Marker */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute left-0 top-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-background bg-background"
+                  >
+                    <span className="h-2.5 w-2.5 rounded-full border-2 border-primary bg-background transition-all duration-300 group-hover:bg-primary" />
+                  </div>
 
-                      <p className="mt-1 text-sm font-medium text-muted-foreground">
-                        {experience.event}
+                  {/* Card */}
+                  <div className="rounded-2xl border bg-card p-6 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/30 group-hover:shadow-lg sm:p-8">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="text-lg font-semibold tracking-tight">
+                          {translation.role}
+                        </h3>
+
+                        <p className="mt-1 text-sm font-medium text-muted-foreground">
+                          {experience.event}
+                        </p>
+                      </div>
+
+                      <p className="text-sm text-muted-foreground">
+                        {experience.period}
                       </p>
                     </div>
 
-                    <p className="text-sm text-muted-foreground">
-                      {experience.period}
+                    <p className="mt-4 max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
+                      {translation.description}
                     </p>
+
+                    <ul className="mt-5 max-w-3xl space-y-2 text-sm leading-6 text-muted-foreground">
+                      {translation.highlights.map((highlight) => (
+                        <li
+                          key={highlight}
+                          className="relative pl-5"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="absolute left-0 top-[0.65rem] h-1.5 w-1.5 rounded-full bg-current"
+                          />
+
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-
-                  <p className="mt-4 max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
-                    {translation.description}
-                  </p>
-
-                  <ul className="mt-4 max-w-3xl space-y-2 text-sm leading-6 text-muted-foreground">
-                    {translation.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="relative pl-5"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="absolute left-0 top-[0.65rem] h-1.5 w-1.5 rounded-full bg-primary/70"
-                        />
-
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
                 </article>
               </ScrollReveal>
             );

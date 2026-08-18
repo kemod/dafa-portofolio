@@ -11,17 +11,32 @@ export function Hero() {
   const t = useTranslation();
 
   return (
-    <Section className="flex min-h-[calc(100vh-4rem)] items-center">
+    <Section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden">
+      {/* Subtle background accent */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 top-1/4 h-72 w-72 rounded-full bg-primary/10 blur-3xl"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-40 bottom-0 h-64 w-64 rounded-full bg-primary/5 blur-3xl"
+      />
+
       <Container>
-        <ScrollReveal>
-          <div className="max-w-3xl">
-            {/* Availability */}
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
+        <div className="relative z-10 max-w-4xl">
+          {/* Availability */}
+          <ScrollReveal>
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-emerald-600 transition-colors hover:border-emerald-500/50 hover:bg-emerald-500/5 dark:text-emerald-400">
                 <span
                   aria-hidden="true"
-                  className="h-2 w-2 rounded-full bg-emerald-500"
-                />
+                  className="relative flex h-2 w-2"
+                >
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-50" />
+
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                </span>
 
                 {t.hero.available}
               </div>
@@ -30,48 +45,77 @@ export function Hero() {
                 {t.hero.availability}
               </p>
             </div>
+          </ScrollReveal>
 
-            {/* Role */}
-            <p className="mb-4 text-sm font-medium text-muted-foreground">
+          {/* Role */}
+          <ScrollReveal delay={100}>
+            <p className="mt-10 text-sm font-medium tracking-[0.2em] text-primary">
               {t.hero.role}
             </p>
+          </ScrollReveal>
 
-            {/* Heading */}
-            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          {/* Main Heading */}
+          <ScrollReveal delay={200}>
+            <h1 className="mt-4 max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-[-0.035em] sm:text-5xl md:text-6xl lg:text-7xl">
               {t.hero.title}
             </h1>
+          </ScrollReveal>
 
-            {/* Description */}
-            <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+          {/* Description */}
+          <ScrollReveal delay={300}>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               {t.hero.description}
             </p>
+          </ScrollReveal>
 
-            {/* Actions */}
+          {/* CTA */}
+          <ScrollReveal delay={400}>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="#projects"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-foreground px-5 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
+                className="group inline-flex h-11 items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 {t.hero.viewProjects}
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </Link>
 
               <a
                 href="/cv/Dafa-Setiandi-CV.pdf"
                 download
-                className="inline-flex h-10 items-center justify-center rounded-md border px-5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/[0.04] hover:text-primary"
+                className="group inline-flex h-11 items-center justify-center gap-2 rounded-md border px-5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 {t.hero.downloadCv}
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-y-0.5"
+                >
+                  ↓
+                </span>
               </a>
 
               <Link
                 href="#contact"
-                className="inline-flex h-10 items-center justify-center rounded-md border px-5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/[0.04] hover:text-primary"
+                className="group inline-flex h-11 items-center justify-center gap-2 rounded-md border px-5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 {t.hero.contact}
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </Link>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </Container>
     </Section>
   );
