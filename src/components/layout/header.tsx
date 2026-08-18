@@ -4,6 +4,7 @@ import { Container } from "@/components/common/container";
 import { cn } from "@/lib/utils";
 import { MobileNavigation } from "./mobile-navigation";
 import { Navigation } from "./navigation";
+import { LanguageSwitcher } from "@/components/common/language-switcher";
 
 type HeaderProps = ComponentPropsWithoutRef<"header">;
 
@@ -13,28 +14,24 @@ export function Header({
 }: HeaderProps) {
   return (
     <header
-      className={cn(
-        "relative z-50 w-full border-b bg-background",
-        className,
-      )}
+      className={cn("relative w-full border-b", className)}
       {...props}
     >
       <Container className="flex min-h-16 items-center justify-between">
         <a
           href="/"
-          className="font-semibold tracking-tight transition-opacity hover:opacity-70"
-          aria-label="Dafa Setiandi — Home"
+          className="font-semibold tracking-tight"
+          aria-label="Home"
         >
           Dafa
         </a>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-6 md:flex">
           <Navigation />
+          <LanguageSwitcher />
         </div>
 
-        <div className="md:hidden">
-          <MobileNavigation />
-        </div>
+        <MobileNavigation />
       </Container>
     </header>
   );

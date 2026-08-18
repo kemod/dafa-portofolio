@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
+import { LanguageSwitcher } from "@/components/common/language-switcher";
 import { navigation } from "@/config/navigation";
 
 export function MobileNavigation() {
@@ -13,7 +14,8 @@ export function MobileNavigation() {
   }
 
   return (
-    <div className="relative md:hidden">
+    <div className="md:hidden">
+      {/* Menu Button */}
       <button
         type="button"
         aria-label={
@@ -22,44 +24,109 @@ export function MobileNavigation() {
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
         onClick={() => setIsOpen((current) => !current)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md border bg-background text-foreground transition-colors hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        className={[
+          "relative inline-flex h-10 w-10 items-center justify-center",
+          "rounded-md border",
+          "text-sm",
+          "transition-all duration-300",
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+          isOpen
+            ? "border-primary bg-primary text-primary-foreground shadow-sm"
+            : "border-border bg-background text-foreground hover:border-primary/40 hover:bg-primary/[0.04] hover:text-primary",
+        ].join(" ")}
       >
         <span
           aria-hidden="true"
-          className="text-lg leading-none"
+          className="text-lg leading-none transition-transform duration-300"
         >
           {isOpen ? "×" : "☰"}
         </span>
       </button>
 
-      {isOpen && (
-        <nav
-          id="mobile-navigation"
-          aria-label="Mobile navigation"
-          className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-56 origin-top-right animate-in overflow-hidden rounded-xl border bg-background shadow-lg duration-200 fade-in zoom-in-95"
-        >
-          <ul className="p-2">
+      {/* Mobile Menu */}
+      <nav
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        className={[
+          "absolute inset-x-0 top-full z-50",
+          "origin-top border-b border-border",
+          "bg-background",
+          "shadow-sm",
+          "transition-all duration-300 ease-out",
+          isOpen
+            ? "visible translate-y-0 opacity-100"
+            : "invisible -translate-y-2 opacity-0 pointer-events-none",
+        ].join(" ")}
+      >
+        <div className="mx-auto w-full max-w-7xl px-6 py-4">
+          {/* Navigation Links */}
+          <ul className="flex flex-col gap-1">
             {navigation.map((item, index) => (
               <li
                 key={item.href}
-                className="animate-in fill-mode-both fade-in slide-in-from-top-1"
+                className={[
+                  "transition-all duration-300 ease-out",
+                  isOpen
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-2 opacity-0",
+                ].join(" ")}
                 style={{
-                  animationDelay: `${index * 40}ms`,
-                  animationFillMode: "both",
+                  transitionDelay: isOpen
+                    ? `${index * 50}ms`
+                    : "0ms",
                 }}
               >
                 <Link
                   href={item.href}
                   onClick={closeMenu}
-                  className="flex min-h-11 items-center rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring"
+                  className="group flex items-center justify-between rounded-md px-4 py-3 text-sm font-medium transition-all duration-300 hover:bg-primary/[0.06] hover:text-primary"
                 >
-                  {item.label}
+                  <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+                    {item.label}
+                  </span>
+
+                  <span
+                    aria-hidden="true"
+                    className="translate-x-0 text-primary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                  >
+                    →
+                  </span>
                 </Link>
               </li>
             ))}
           </ul>
-        </nav>
-      )}
+
+          {/* Language */}
+          <div
+            className={[
+              "mt-4 border-t border-border pt-4",
+              "transition-all duration-300 ease-out",
+              isOpen
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-2 opacity-0",
+            ].join(" ")}
+            style={{
+              transitionDelay: isOpen
+                ? `${navigation.length * 50 + 50}ms`
+                : "0ms",
+            }}
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em]">
+                  Language
+                </p>
+
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Choose your preferred language
+                </p>
+              </div>
+
+              <LanguageSwitcher />
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }

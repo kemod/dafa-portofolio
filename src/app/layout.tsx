@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Manrope } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { LanguageProvider } from "@/components/providers/language-provider";
 
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
@@ -120,12 +116,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <JsonLd />
+        <LanguageProvider>
+          <JsonLd />
 
-        {children}
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
