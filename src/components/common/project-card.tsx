@@ -38,7 +38,11 @@ export function ProjectCard({
             />
           </>
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          <div
+            className="flex h-full items-center justify-center text-sm text-muted-foreground"
+            role="img"
+            aria-label={`${title} project preview unavailable`}
+          >
             Project Preview
           </div>
         )}
@@ -59,7 +63,10 @@ export function ProjectCard({
 
           {/* Technologies */}
           {project.technologies.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div
+              className="mt-6 flex flex-wrap gap-2"
+              aria-label={`${title} technologies`}
+            >
               {project.technologies.map((technology) => (
                 <TechnologyPill
                   key={technology.name}
@@ -76,7 +83,8 @@ export function ProjectCard({
               <Link
                 href={project.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label={`${liveDemoLabel}: ${title}`}
                 className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 {liveDemoLabel}
