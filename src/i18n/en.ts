@@ -13,8 +13,7 @@ export const en = {
   hero: {
     available: "Available for Work",
 
-    availability:
-      "Open to full-time, freelance, and remote opportunities.",
+    availability: "Open to full-time, freelance, and remote opportunities.",
 
     role: "Software Engineer",
 
@@ -50,9 +49,65 @@ export const en = {
   education: {
     title: "Education",
 
-    description:
-      "My academic background and academic project.",
+    description: "My academic background and academic project.",
 
     academicProject: "Academic Project",
   },
+
+  organizational: {
+  title: "Organizational Experience",
+
+  description:
+    "Leadership and technical experience gained through organizational activities.",
+
+  experiences: [
+    {
+      role: "Vice Head of Web Programmer Division",
+
+      description:
+        "Supported the Web Programmer Division in maintaining the organization's website and coordinating website-related activities.",
+
+      highlights: [
+        "Provided WordPress training to internal INKOM UNJANI members.",
+        "Coordinated website updates and maintenance with division members.",
+        "Coordinated with other divisions to update website content.",
+      ],
+    },
+
+    {
+      role: "Web Programmer Staff",
+
+      description:
+        "Supported website maintenance, content management, and SEO activities for INKOM UNJANI.",
+
+      highlights: [
+        "Delivered WordPress learning materials to internal INKOM UNJANI members.",
+        "Updated and maintained the INKOM UNJANI website.",
+        "Managed website SEO activities.",
+      ],
+    },
+  ],
+},
+
+committee: {
+  title: "Committee Experience",
+
+  description:
+    "Event experience gained through organizational activities.",
+
+  experiences: [
+    {
+      role: "Logistics Committee Member",
+
+      description:
+        "Supported the logistics and venue preparation for the INKOM UNJANI member induction ceremony.",
+
+      highlights: [
+        "Determined the equipment required for the induction ceremony.",
+        "Coordinated the ordering of required event equipment.",
+        "Assisted with decorating and preparing the event venue.",
+      ],
+    },
+  ],
+},
 };
