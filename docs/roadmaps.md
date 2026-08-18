@@ -22,8 +22,8 @@ Status: Completed
 
 - Container
 - Section
-- Section Header
-- Technology Pill
+- SectionHeader
+- TechnologyPill
 - Design System Documentation
 - ADR-002
 - ADR-003
@@ -57,9 +57,6 @@ Status: Completed
 - Hero Section
 - Downloadable CV
 - About Section
-- Education Section
-- Organizational Experience Section
-- Committee Experience Section
 - Featured Projects Section
 - Experience Section
 - Technologies Section
@@ -70,178 +67,141 @@ Status: Completed
 
 ---
 
-## Sprint 5 — Visual & UX Polish ✅
+## Sprint 5 — Content & Experience Structure ✅
 
 Status: Completed
 
-### Theme & Typography
+### Deliverables
 
-- Refine global typography
-- Improve portfolio visual identity
-- Refine heading hierarchy
-- Improve spacing consistency
-- Establish monochrome-based visual system
-- Introduce Electric Blue as interaction accent
-- Introduce green availability indicator
-
-### Navigation
-
-- Desktop navigation refinement
-- Mobile navigation refinement
-- Mobile menu open/close animation
-- Mobile navigation hover interaction
-- Animated navigation underline
-- Responsive navigation behavior
-
-### Hero
-
-- Refine Hero visual hierarchy
-- Improve `Available for Work` indicator
-- Green availability accent
-- CTA refinement
-- Hero scroll animation
-- Responsive Hero layout
-
-### Content Sections
-
-- About section visual refinement
-- Education section refinement
-- Organizational Experience timeline
-- Committee Experience timeline
-- Professional Experience timeline
-- Experience hover interactions
-- Project card refinement
-- Technologies section refinement
-
-### Show More / Show Less
-
-- Featured Projects Show More / Show Less
-- Professional Experience Show More / Show Less
-- Responsive Show More controls
-- Animated interaction states
-
-### Scroll Animation
-
-- Implement ScrollReveal system
-- Hero scroll animation
-- Section reveal animations
-- Staggered content animations
-- Experience animation
-- Organizational animation
-- Committee animation
-- Contact animation
-- Hover and transition refinement
-
-### Contact
-
-- Dark closing section
-- Deep Graphite background
-- Light typography hierarchy
-- Electric Blue interaction accent
-- Email CTA
-- GitHub link
-- LinkedIn link
-- WhatsApp link
-- Contact card hover animations
-- Responsive Contact layout
-
-### Quality Verification
-
-- Responsive refinement
-- Mobile layout verification
-- Animation consistency
-- Typography consistency
-- Hover state verification
-- Production build verification
-- Lint verification
-- Git working tree verification
+- About Section
+- Education Section
+- Organizational Experience
+- Committee Experience
+- Professional Experience
+- Featured Projects
+- Technologies & Skills
+- Contact Section
+- Experience Show More / Show Less
+- Project Show More / Show Less
+- Project Preview Image Support
 
 ---
 
-## Sprint 6 — Final QA & Production
+## Sprint 6 — Localization & UI Polish ✅
 
-Status: Next
+Status: Completed
 
-### UI Audit
+### Localization
 
-- Desktop visual audit
-- Tablet visual audit
-- Mobile visual audit
-- Section spacing audit
-- Typography audit
-- Button consistency audit
-- Hover state audit
-- Animation audit
-- Navigation audit
-- Contact section audit
+- English language support
+- Indonesian language support
+- Language Switcher
+- Bilingual Hero Section
+- Bilingual About Section
+- Bilingual Education Section
+- Bilingual Organizational Experience
+- Bilingual Committee Experience
+- Bilingual Professional Experience
+- Bilingual Featured Projects
+- Bilingual Technologies & Skills
+- Bilingual Contact Section
 
-### Accessibility
+### Navigation & Interaction
 
-- Heading hierarchy verification
-- Link accessibility
-- Button accessibility
-- ARIA attributes
-- Keyboard navigation
-- Focus states
-- Reduced motion support
-- Image alt text verification
+- Sticky Header
+- Desktop Navigation
+- Mobile Navigation
+- Active Section Indicator
+- Smooth Anchor Scrolling
+- Animated Navigation Underline
+- Language Switcher Integration
+- Navigation hover interactions
+
+### Visual Polish
+
+- Restored original section designs after localization
+- Restored Project Card design
+- Restored About Section design
+- Restored Education Section design
+- Restored Experience Card design
+- Contact section visual theme
+- Project Preview Images
+- Responsive UI refinements
+- Typography standardization with Sora
+
+### Quality
+
+- TypeScript error fixes
+- i18n structure fixes
+- Server / Client component compatibility fixes
+- Production build verification
+
+---
+
+## Sprint 7 — Production Readiness
+
+Status: Planned
 
 ### SEO
 
-- Metadata verification
-- SEO title verification
-- Description verification
-- Keywords verification
+- Metadata optimization
+- Open Graph optimization
+- Twitter Card optimization
+- Sitemap
+- Robots configuration
 - Canonical URL verification
-- Open Graph verification
-- Twitter Card verification
-- JSON-LD verification
+- Structured data verification
+
+### Accessibility
+
+- Keyboard navigation
+- Focus states
+- ARIA verification
+- Semantic HTML review
+- Color contrast review
+- Screen reader considerations
 
 ### Performance
 
 - Image optimization
-- Font loading verification
-- Lighthouse audit
-- Mobile performance audit
-- Layout shift verification
-- Animation performance verification
+- Project preview optimization
+- Font loading optimization
+- Client-side rendering review
+- Animation performance review
+- Lighthouse optimization
 
-### Git & Pull Request
+### Responsive QA
 
-- Review Git commit history
-- Review branch status
-- Push feature branch
-- Create Pull Request
-- Review Pull Request diff
-- Resolve review issues
-- Merge Pull Request
+- Desktop QA
+- Tablet QA
+- Mobile QA
+- Mobile navigation QA
+- Sticky header QA
+- Smooth scrolling QA
 
 ### Production
 
+- Production build verification
 - Vercel deployment verification
 - Production URL verification
-- Navigation link verification
-- CV download verification
-- Email CTA verification
-- GitHub link verification
-- LinkedIn link verification
-- WhatsApp link verification
-- Final production smoke test
+- 404 page
+- Final content review
+- Final bilingual QA
 
 ---
 
-## Sprint 7 — Post-Launch Improvements
+## Sprint 8 — Future Enhancements
 
 Status: Planned
 
-### Future Enhancements
+### Potential Improvements
 
-- Performance improvements based on production metrics
-- Advanced project filtering
 - Project detail pages
-- Enhanced project case studies
-- Improved interaction design
-- Additional micro-interactions
-- Analytics integration
-- Further SEO improvements
-- Recruiter-focused portfolio improvements
+- Individual project case studies
+- Project filtering
+- Contact form
+- Downloadable portfolio / resume improvements
+- Blog / technical articles
+- GitHub project integration
+- Analytics
+- Additional animations and micro-interactions
