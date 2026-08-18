@@ -6,9 +6,17 @@ import type { Project } from "@/config/projects";
 
 type ProjectCardProps = {
   project: Project;
+  title: string;
+  description: string;
+  liveDemoLabel: string;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  title,
+  description,
+  liveDemoLabel,
+}: ProjectCardProps) {
   return (
     <article className="group overflow-hidden rounded-2xl border bg-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
       {/* Project Preview */}
@@ -17,7 +25,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <>
             <Image
               src={project.image}
-              alt={`${project.title} project preview`}
+              alt={`${title} project preview`}
               fill
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               sizes="(max-width: 768px) 100vw, 1200px"
@@ -41,12 +49,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="max-w-3xl">
           {/* Title */}
           <h3 className="font-heading text-xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-primary sm:text-2xl">
-            {project.title}
+            {title}
           </h3>
 
           {/* Description */}
           <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
-            {project.description}
+            {description}
           </p>
 
           {/* Technologies */}
@@ -71,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 rel="noreferrer"
                 className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
-                Live Demo
+                {liveDemoLabel}
 
                 <span
                   aria-hidden="true"

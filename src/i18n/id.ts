@@ -194,4 +194,47 @@ experience: {
     },
   ],
 },
+
+projects: {
+  title: "Proyek Pilihan",
+
+  description:
+    "Kumpulan proyek pilihan di bidang software engineering dan pengembangan web.",
+
+  showMore: "Lihat Lebih Banyak",
+
+  showLess: "Lihat Lebih Sedikit",
+
+  liveDemo: "Demo Langsung",
+
+  items: [
+    {
+      title: "Aurora",
+
+      description:
+        "Platform undangan pernikahan digital full-stack yang saat ini masih dalam tahap pengembangan, dirancang dengan arsitektur modular dan teknologi web modern.",
+    },
+
+    {
+      title: "Website Portofolio Pribadi",
+
+      description:
+        "Website portofolio pribadi yang responsif untuk menampilkan pengalaman profesional, proyek pilihan, keahlian teknis, dan latar belakang akademik.",
+    },
+
+    {
+      title: "Company Profile Auctore Group",
+
+      description:
+        "Website company profile responsif yang dibangun dengan struktur komponen modular dengan fokus pada kemudahan pemeliharaan, desain responsif, dan SEO.",
+    },
+
+    {
+      title: "Prediksi Harga Properti",
+
+      description:
+        "Proyek machine learning akademik untuk memprediksi harga properti di wilayah Bandung Raya menggunakan metode K-Nearest Neighbors Regression.",
+    },
+  ],
+},
 };

@@ -193,4 +193,47 @@ experience: {
     },
   ],
 },
+
+projects: {
+  title: "Featured Projects",
+
+  description:
+    "A collection of selected software engineering and web development projects.",
+
+  showMore: "Show More",
+
+  showLess: "Show Less",
+
+  items: [
+    {
+      title: "Aurora",
+
+      description:
+        "A full-stack digital wedding invitation platform currently in development, designed with a modular architecture and modern web technologies.",
+    },
+
+    {
+      title: "Personal Portfolio Website",
+
+      description:
+        "A responsive personal portfolio website showcasing professional experience, selected projects, technical skills, and academic background.",
+    },
+
+    {
+      title: "Auctore Group Company Profile",
+
+      description:
+        "A responsive company profile website built with a modular component structure and a focus on maintainability, responsive design, and SEO.",
+    },
+
+    {
+      title: "Property Price Prediction",
+
+      description:
+        "An academic machine learning project for predicting property prices in the Greater Bandung Area using the K-Nearest Neighbors Regression method.",
+    },
+  ],
+
+  liveDemo: "Live Demo",
+},
 };
