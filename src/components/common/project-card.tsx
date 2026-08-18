@@ -10,16 +10,25 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="overflow-hidden rounded-xl border transition-colors hover:bg-muted/30">
+    <article className="group overflow-hidden rounded-2xl border bg-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+      {/* Project Preview */}
       <div className="relative aspect-video overflow-hidden bg-muted">
         {project.image ? (
-          <Image
-            src={project.image}
-            alt={`${project.title} project preview`}
-            fill
-            className="object-cover transition-transform duration-500 hover:scale-[1.02]"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
+          <>
+            <Image
+              src={project.image}
+              alt={`${project.title} project preview`}
+              fill
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+
+            {/* Subtle hover overlay */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            />
+          </>
         ) : (
           <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
             Project Preview
@@ -27,16 +36,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
 
+      {/* Content */}
       <div className="p-6 sm:p-8">
         <div className="max-w-3xl">
-          <h3 className="text-xl font-semibold tracking-tight">
+          {/* Title */}
+          <h3 className="font-heading text-xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-primary sm:text-2xl">
             {project.title}
           </h3>
 
-          <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">
+          {/* Description */}
+          <p className="mt-3 text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
             {project.description}
           </p>
 
+          {/* Technologies */}
           {project.technologies.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-2">
               {project.technologies.map((technology) => (
@@ -49,16 +62,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           )}
 
+          {/* Live Demo */}
           {project.href && (
-            <div className="mt-6">
+            <div className="mt-7">
               <Link
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center text-sm font-medium transition-opacity hover:opacity-70"
+                className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 Live Demo
-                <span aria-hidden="true" className="ml-1">
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                >
                   ↗
                 </span>
               </Link>
